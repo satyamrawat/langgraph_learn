@@ -1,0 +1,26 @@
+[project]
+name = "learning-langgraph"
+version = "0.1.0"
+description = "A learning project for Amazon Bedrock, tool calling, and LangGraph."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "boto3>=1.43.72",
+    "langgraph>=1.2.11",
+    "openai>=3.1.0",
+    "pydantic>=2.13.4",
+    "truststore>=0.10.4",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29",
+    "pytest>=8.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.6,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
